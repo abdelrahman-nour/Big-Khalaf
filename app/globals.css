@@ -1,0 +1,138 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", system-ui, sans-serif;
+  --font-display: "Bebas Neue", "Cairo", sans-serif;
+
+  /* لون البراند الدهبي - من اللوجو */
+  --color-gold: #c9a24a;
+  --color-gold-light: #e3c27a;
+  --color-gold-dark: #8c6a24;
+}
+
+html {
+  background: #0a0a0a;
+}
+body {
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* خطوط مائلة خفيفة - إحساس الجيم والحديد */
+.stripes {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #fff 0 1px,
+    transparent 1px 14px
+  );
+  mask-image: linear-gradient(to bottom, #000, transparent 70%);
+}
+
+/* دخول ناعم للعناصر */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+/* اللوجو بيطفو بهدوء + الإطار الدهبي بيلف */
+@keyframes float {
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.float {
+  animation: float 4s ease-in-out infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.spin-slow {
+  animation: spin 8s linear infinite;
+}
+
+/* التوهج بيتنفس */
+@keyframes breathe {
+  50% {
+    opacity: 0.55;
+    transform: translateX(-50%) scale(1.1);
+  }
+}
+.glow {
+  animation: breathe 6s ease-in-out infinite;
+}
+
+/* لمعة بتعدي على زرار الطلب */
+.shine::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 35%,
+    rgba(255, 255, 255, 0.55) 50%,
+    transparent 65%
+  );
+  transform: translateX(-120%);
+  animation: shine 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes shine {
+  0%,
+  55% {
+    transform: translateX(-120%);
+  }
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+/* نبض حوالين أيقونة واتساب */
+.pulse-ring {
+  box-shadow: 0 0 0 0 rgba(201, 162, 74, 0.7);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  70% {
+    box-shadow: 0 0 0 12px rgba(201, 162, 74, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(201, 162, 74, 0);
+  }
+}
+
+/* شريط المنتجات */
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+.marquee {
+  animation: marquee 22s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rise,
+  .float,
+  .spin-slow,
+  .glow,
+  .shine::after,
+  .pulse-ring,
+  .marquee {
+    animation: none;
+  }
+}
