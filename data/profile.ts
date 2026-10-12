@@ -24,9 +24,12 @@ export const profile = {
   hours: { open: 12, close: 24 },
 
   socials: {
-    facebook: "https://facebook.com/",
-    instagram: "https://instagram.com/",
-    tiktok: "https://tiktok.com/@",
+    facebook:
+      "https://www.facebook.com/profile.php?id=61594169696001&mibextid=wwXIfr",
+    instagram:
+      "https://www.instagram.com/big.khalafsups?rpxt=MWU3dGx1dnVnZmxwaQ==",
+    tiktok:
+      "https://www.instagram.com/big.khalafsups?rpxt=MWU3dGx1dnVnZmxwaQ==",
   },
 
   logo: "/logo.png" as string | null,

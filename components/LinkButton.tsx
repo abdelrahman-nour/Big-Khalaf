@@ -22,7 +22,7 @@ export default function LinkButton({ href, label, sub, icon, primary, delay = 0,
       className={`rise group relative flex items-center gap-4 overflow-hidden rounded-2xl border px-4 py-3.5 transition duration-200 hover:-translate-y-0.5 active:scale-[0.98] ${
         primary
           ? "shine border-gold bg-gold text-black shadow-[0_10px_30px_-10px_rgba(201,162,74,0.6)] hover:bg-gold-light"
-          : "border-white/10 bg-white/[0.04] text-white hover:border-gold/70 hover:bg-white/[0.07]"
+          : "border-white/10 bg-white/4 text-white hover:border-gold/70 hover:bg-white/[0.07]"
       }`}
     >
       <span
