@@ -28,8 +28,7 @@ export const profile = {
       "https://www.facebook.com/profile.php?id=61594169696001&mibextid=wwXIfr",
     instagram:
       "https://www.instagram.com/big.khalafsups?rpxt=MWU3dGx1dnVnZmxwaQ==",
-    tiktok:
-      "https://www.instagram.com/big.khalafsups?rpxt=MWU3dGx1dnVnZmxwaQ==",
+    tiktok: "https://www.tiktok.com/@khalaf54?_r=1&_t=ZS-9AV8wYpd4Vz",
   },
 
   logo: "/logo.png" as string | null,
